@@ -5,8 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 firstname = "chinmay"
 lastname = "jain"
 email = "chinmaycj7@gmail.com"
-username = "chinmay1234"
-password = "chinmay1234"
+username = "chinmay12345"
+password = "chinmay12345"
 
 # driver = webdriver.Chrome("/Users/yashvimehta/Downloads/chromedriver")
 driver = webdriver.Chrome("./chromedriver")
@@ -20,8 +20,8 @@ driver.find_element_by_id("password1").send_keys(password)
 driver.find_element_by_id("password2").send_keys(password)
 driver.find_element_by_id("submit").click()
 
-print(driver.getCurrentUrl())
-if("http://127.0.0.1:8000/" ==driver.getCurrentUrl()):
+print(driver.current_url)
+if("http://127.0.0.1:8000/" ==driver.current_url):
     print("no error")
 
 driver.close()
