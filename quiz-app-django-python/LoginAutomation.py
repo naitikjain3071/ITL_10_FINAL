@@ -34,8 +34,8 @@ driver.find_element_by_id("submit").click()
 #     print("[+] Login successful")
 
 # # close the driver
-print(driver.getCurrentUrl())
-if("http://127.0.0.1:8000/" ==driver.getCurrentUrl()):
+print(driver.current_url())
+if("http://127.0.0.1:8000/" ==driver.current_url()):
     print("no error")
 
 driver.close()
