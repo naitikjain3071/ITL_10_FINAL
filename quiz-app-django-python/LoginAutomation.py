@@ -3,11 +3,12 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 # Github credentials
-username = "yashvii_"
-password = "1233456765"
+username = "n123"
+password = "n123"
 
 # initialize the Chrome driver
-driver = webdriver.Chrome("/Users/yashvimehta/Downloads/chromedriver")
+#driver = webdriver.Chrome("/Users/yashvimehta/Downloads/chromedriver")
+driver = webdriver.Chrome("./chromedriver")
 # head to github login page
 driver.get("http://127.0.0.1:8000/login")
 # find username/email field and send the username itself to the input field
@@ -33,7 +34,7 @@ driver.find_element_by_id("submit").click()
 #     print("[+] Login successful")
 
 # # close the driver
-
+print(driver.getCurrentUrl())
 if("http://127.0.0.1:8000/" ==driver.getCurrentUrl()):
     print("no error")
 
