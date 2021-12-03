@@ -7,8 +7,8 @@ import time
 firstname = "chinmay"
 lastname = "jain"
 email = "chinmaycj7@gmail.com"
-username = "chin"
-password = "chin"
+username = "ch123"
+password = "abcdefgh123"
 
 # Initialise the Chrome driver
 #driver = webdriver.Chrome("/Users/yashvimehta/Downloads/chromedriver")
@@ -27,7 +27,7 @@ driver.find_element_by_id("password1").send_keys(password)
 driver.find_element_by_id("password2").send_keys(password)
 time.sleep(2)
 driver.find_element_by_id("submit").click()
-
+time.sleep(2)
 print(driver.current_url)
 if("http://127.0.0.1:8000/" ==driver.current_url):
     print("no error")

@@ -4,13 +4,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.ui import Select
+import time 
 
 # Login credentials
 username = "admin"
 password = "admin"
 
 # Details of Question
-question_text ="What does HTML stand for?"
+question_text ="Which property is used to create space between the element’s border and inner content?"
 
 
 
@@ -35,6 +36,16 @@ select.select_by_visible_text('Internet Technology')
 # select by value 
 select.select_by_value('13')
 driver.find_element_by_class_name("btn").click()
+#time.sleep(1)
+driver.find_element_by_class_name("btn").click()
+driver.find_element_by_xpath("//a[@href='/add_options/88/']").click()
+driver.find_element_by_id("id_answer_set-0-content").send_keys("border")
+driver.find_element_by_id("id_answer_set-1-content").send_keys("padding")
+driver.find_element_by_id("id_answer_set-1-correct").click()
+driver.find_element_by_id("id_answer_set-2-content").send_keys("spacing")
+driver.find_element_by_id("id_answer_set-3-content").send_keys("margin")
+driver.find_element_by_class_name("btn").click()
+time.sleep(3)
 
 if("http://127.0.0.1:8000/" ==driver.current_url):
     print("no error")
